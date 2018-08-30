@@ -86,15 +86,41 @@ Section | Notes
 ```
 
 ## 4. Version control
+
 This README was written by Jason Tan and is correct as of 2 September 2018.
 
 This website was created by [Maartje/Mauro] on [] and was last worked on 2 September 2018 by Class 14:
+
 * **A Team** (Fadi, Emad, Wael & Hadeel)
 * **Big Voice Big Team** (Sarbast, Sobhi, Rashad & Murat)
 * **Return 0** (Aya, Isaac & Jason)
 
 ## 5. Construction process
 
-In week 1 of the project we had something called an event storm, which is to be found [here] ().
+### Event storm
 
-In week 2 of the project we proceeded
+In week 1 of the project we had something called an event storm, which is to be found [here]().
+
+The general idea is that the task giver provides 
+
+### Admin stories
+In week 2 of the project we finalised the user story, which can be found [here](https://github.com/Aya-Alabrash/Class14-Project/tree/master/Presentation).
+
+Essentially it comes down to the following:-
+
+As an Admin, I would expect to:-
+
+1. Create new Google sheet as a template.
+2. Set a deadline for the registration process.
+3. Recieve an auto reply email.
+4. Send an email to the candidate asking him/her for his/her CV, and motivation letter.
+5. Recieve an email which contains the said documents from the applicant.
+6. Store the candidates' data on the Google sheet.
+7. Score to each candidate’s CV/motivation letter.
+8. Sort the candidates by whether or not they will proceed to the next round based on their CV/motivation letter, with YES or NO.
+9. Send an email with two technical assignments to the applicants. As at the present time, it is the Khan Academy link and the Codepen assignment. 
+10. Set a deadline for the technical assignment.
+11. Receive the technical assignment.
+12. Score the technical assignment.
+13. Combine the scores of the CV/motivation letter with those of the the technical assignment (codepen link and Khan Academy screenshot).
+14.  sort the applicants’s technical assignments with YES or NO according to the scores. 16-	As an admin I expect to send a rejection email to the unselected applicants . 17-	As an admin I expect to put the selected applicants in a call list. 18-	As an admin I expect to schedule a phone call with the selected applicants. 19-	As an admin I expect to send to the applicants a confirmation email for the scheduled phone call. 20-	As an admin I expect to make some notes based on the call. 21-	As an admin I expect to merge the notes with the previous data. 22-	As an admin I expect to make a judgment on the notes and the scores. 23-	As an admin I expect to sort them in a categories (YES, NO, MAYBE). 24-	As an admin I expect to send a rejection email to the unselected applicants . 25-	As an admin I expect to send an email to the selected applicants . 26- As an admin I expect to put the applicants who took a maybe decision in a waiting list. 27-	As an admin I expect to choose the best scores from the waiting list in a case that the class isn’t complete . 28-	As an admin I expect to send an email to all the selected applicants provided by information about the next class. 29-	As an admin I expect to CREATE a new class.
