@@ -118,9 +118,25 @@ As an Admin, I would expect to:-
 6. Store the candidates' data on the Google sheet.
 7. Score to each candidate’s CV/motivation letter.
 8. Sort the candidates by whether or not they will proceed to the next round based on their CV/motivation letter, with YES or NO.
-9. Send an email with two technical assignments to the applicants. As at the present time, it is the Khan Academy link and the Codepen assignment. 
+>* In the case of candidates who receive a "NO" answer, I would expect a rejection email to be sent to them.
+
+9. Send an email with two technical assignments to the applicants. As at the present time, it is the Khan Academy link and the Codepen assignment.
 10. Set a deadline for the technical assignment.
 11. Receive the technical assignment.
 12. Score the technical assignment.
 13. Combine the scores of the CV/motivation letter with those of the the technical assignment (codepen link and Khan Academy screenshot).
-14.  sort the applicants’s technical assignments with YES or NO according to the scores. 16-	As an admin I expect to send a rejection email to the unselected applicants . 17-	As an admin I expect to put the selected applicants in a call list. 18-	As an admin I expect to schedule a phone call with the selected applicants. 19-	As an admin I expect to send to the applicants a confirmation email for the scheduled phone call. 20-	As an admin I expect to make some notes based on the call. 21-	As an admin I expect to merge the notes with the previous data. 22-	As an admin I expect to make a judgment on the notes and the scores. 23-	As an admin I expect to sort them in a categories (YES, NO, MAYBE). 24-	As an admin I expect to send a rejection email to the unselected applicants . 25-	As an admin I expect to send an email to the selected applicants . 26- As an admin I expect to put the applicants who took a maybe decision in a waiting list. 27-	As an admin I expect to choose the best scores from the waiting list in a case that the class isn’t complete . 28-	As an admin I expect to send an email to all the selected applicants provided by information about the next class. 29-	As an admin I expect to CREATE a new class.
+14. Put the selected candidates in a call list. 
+15. Schedule a 'phone call with the selected candidates. 
+16. Send the selected candidates a confirmation email for the scheduled 'phone call. 
+17. Make some notes based on the call. 
+18. Merge the notes with the previous data. 
+19. Make a judgment on the notes and the scores. 
+20. Sort the candidates in categories (YES, NO, MAYBE). 
+
+>*  Send a rejection email to the unsuccessful candidates. 
+>*  Send an email to the successful candidates. 
+
+23. Put the candidates who was listed as a MAYBE in a waiting list. 
+24. Choose the candidate(s) with the best scores from the waiting list in a case that the new class is not full. 
+25. Send an email to all the successful candidates, providing information about the next class. 
+26. Create a new class.
