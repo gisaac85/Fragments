@@ -3,8 +3,9 @@ Class 14 HYF Project
 
 ## README contents
 
+0. Introduction
 1. Workflow / HYF to-do
-2. User manual
+2. Installation instructions/User manual
 >* DO NOT TOUCH
 >* ANOMALIES
 3. Technical details
@@ -13,24 +14,30 @@ Class 14 HYF Project
 4. Version control
 5. Information regarding construction process.
 
+## Introduction
+
+This README accompanies the Class 14 Project, which was an assignment to update the existing HYF site to automate more, and reduce mistakes in having to make manual entries.
+
+For a TL;DR guide to how to install/initialise and use the website, please go straight to section 2. 
+
 ## 1. Workflow/ HYF to-do
 ***NB:*** _"Automatic" means we have written various functions to enable the system to work given specific input_. :smiley:
 
-Step | Description | Whose Action
----- | ----------- | :------------:
+Step | Action | Actor
+---- | ------ | :----:
 A. | A new class is advertised on HYF website/social media/other outlets. | HYF
 B. | Candidate goes on website to apply on the [HYF website apply tab](http://hackyourfuture.net/apply). To apply, candidate has to fill in form with basic data - Name, address, educational background, etc. | Candidate
-C. | After "Apply" is clicked, basic data is sent to backend. ***NB:*** _We have implemented functionality where a repeat submission is possible - we have assumed that the candidate knows his/her own email address, and will hold that constant. In the event that a duplicate application is submitted with the same email address, the other data is updated with the latest entry._ | Automatic
-D. | Backend generates an email to be sent to the candidate, containing a token and instructions on submitting CV/Motivation Letter. | Automatic
+C. | After "Apply" is clicked, basic data is sent to backend. ***NB:*** _We have implemented functionality where a repeat submission is possible - we have assumed that the candidate knows his/her own email address, and will hold that constant. In the event that a duplicate application is submitted with the same email address, the other data is updated with the latest entry._ | System
+D. | Backend generates an email to be sent to the candidate, containing a token and instructions on submitting CV/Motivation Letter. | Backend
 E. | In the first upload page, candidate can choose to upload files for CV/Motivation, or write this in.  | Candidate
-F. | After "Submit" is clicked, this is again sent to the backend.| Automatic
+F. | After "Submit" is clicked, this is again sent to the backend.| System
 G. | HYF examines CV/Motivation Letter of candidates, assigning a score manually onto the Google spreadsheets. ***NB:*** _This is the first round where candidates can get screened out._ | HYF
-H. | Successful candidates get sent an assignment (Khan Academy/Codepen) through email by HYF, also with a link to submit their assignments.   | HYF
+H. | Successful candidates get sent an assignment (Khan Academy/Codepen) through email by HYF, also with a link to submit their assignments.   | HYF and backend
 I. | Candidate does and submits their assignments through the link. | Candidate
 J. | HYF scores the assignments, and decides who to call. ***NB:*** _This is the second - and last - round where candidates can get screened out._| HYF
 K. | HYF calls the candidates and makes a final decision. | HYF
 
-## 2. User manual
+## 2. Installation instructions/User manual
 ***NB:*** _Before beginning, it is necessary to initialise the application._ 
 
 Step | Description 
@@ -140,3 +147,13 @@ As an Admin, I would expect to:-
 24. Choose the candidate(s) with the best scores from the waiting list in a case that the new class is not full. 
 25. Send an email to all the successful candidates, providing information about the next class. 
 26. Create a new class.
+
+--vue JS can write html tag.
+script activates components etc.
+
+mounthed fuctions - loads the page.
+methods activated using .this method.
+html/css can be combined using vue. scss used in styling, using classes and name. &__ denotes, eg, belonging to .Apply.
+$refs refers over to the function.
+validations of input.
+axios - way of connecting to server. [.post because posting to google sheets.]
