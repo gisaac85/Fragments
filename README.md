@@ -31,11 +31,11 @@ In Vue, HTML/CSS can be combined. The CSS components are a unique type called sc
 Step | Action | Actor
 ---- | ------ | :----:
 A. | A new class is advertised on HYF website/social media/other outlets. | HYF
-B. | Candidate goes on website to apply on the [HYF website apply tab](http://hackyourfuture.net/apply). To apply, candidate has to fill in form with basic data - Name, address, educational background, etc. | Candidate
-C. | After "Apply" is clicked, basic data is sent to backend. ***NB:*** _We have implemented functionality where a repeat submission is possible - we have assumed that the candidate knows his/her own email address, and will hold that constant. In the event that a duplicate application is submitted with the same email address, the other data is updated with the latest entry._ | System
+B. | Candidate goes on website to apply on the [HYF website apply tab](http://hackyourfuture.net/apply). To apply, candidate fills in form with basic data - Name, address, educational background, etc. | Candidate
+C. | On clicking "Apply", basic data is sent to backend. ***NB:*** _We have implemented functionality where a repeat submission is possible - we have assumed that the candidate knows his/her own email address, and will hold that constant. In the event that a duplicate application is submitted with the same email address, the other data is updated with the latest entry._ | System
 D. | Backend generates an email to be sent to the candidate, containing a token and instructions on submitting CV/Motivation Letter. | Backend
 E. | In the first upload page, candidate can choose to upload files for CV/Motivation, or write this in.  | Candidate
-F. | After "Submit" is clicked, this is again sent to the backend.| System
+F. | After "Apply" is clicked, this is again sent to the backend.| System
 G. | HYF examines CV/Motivation Letter of candidates, assigning a score manually onto the Google spreadsheets. ***NB:*** _This is the first round where candidates can get screened out._ | HYF
 H. | Successful candidates get sent an assignment (Khan Academy/Codepen) through email by HYF, also with a link to submit their assignments.   | HYF and backend
 I. | Candidate does and submits their assignments through the link. | Candidate
@@ -80,9 +80,9 @@ General Note 3 |  In `pages` > `upload` > index.vue, there are a few `$refs`. Th
 General Note 4 | In line 78 of the same file, the following line of code may be seen: ```import axios from "~/plugins/axios";``` this is the means by which we are connecting the frontend with the backend server; using this, data keyed into the front end ends up on the Google Sheets. Consequently, the `.post` method is use because we are posting these to the Google Sheets.
 General Note 5 | The application has validation on both frontend and backend to check for lengths of input in, say, telephone number and email address. These follow the if/else checkers.
 General Note 6 | For the file extension/mime types, the backend validation is done using a multer package.
-General Note 7 | To store endpoints, we used multer s3: see `api` > `src` > app.js, lines 6 and 23. Here, we defined s3 and left the access key/secret access key as is as this would be provided by the admin.
+General Note 7 | To store endpoints, we used multer s3: see `api` > `src` > app.js, lines 6 and 23. Here, we defined s3 and left the access key/secret access key as is as this would be provided by the admin. We store the CV/Motivation Letter and assignment into the Amazon Web Services server.
 General Note 8 | The mail encrypting/decrypting function is found in line 29-48 of `api` > `src` > app.js.
-General Note 9 | We have also created the endpoints for the teach form.
+General Note 9 | We have also created the endpoints for the following forms: "teach", "upload", "contact us", amongst others.
 2.D | The scripts running this query live in `package.json`, entry "scripts". This generates a file called `google-sheet-config.json` in the `src` folder which is blank.
 2.H-K | This populates the `google-sheet-config.json` file. The functions generating this are in `api` > `bin` > `create-dev-config`.This works via a resolve/reject function.
 
