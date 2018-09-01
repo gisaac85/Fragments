@@ -12,16 +12,21 @@ Class 14 HYF Project
 >* Notes
 >* Structure
 4. Version control
-5. Information regarding construction process.
+5. Project History.
+6. Future Development
 
 ## Introduction
 
 This README accompanies the Class 14 Project, which was an assignment to update the existing HYF site to automate more, and reduce mistakes in having to make manual entries.
 
-For a TL;DR guide to how to install/initialise and use the website, please go straight to section 2. 
+_For a TL;DR guide to how to install/initialise and use the website, please go straight to section 2._
+
+This has been an application written in Vue JS ("Vue"), which is a similar language to React. The reason why Vue has been chosen is because of its simplicity for smaller applications such as this. 
+
+In Vue, HTML/CSS can be combined. The CSS components are a unique type called scss. This will be expanded upon in greater detail in section 3. 
 
 ## 1. Workflow/ HYF to-do
-***NB:*** _"Automatic" means we have written various functions to enable the system to work given specific input_. :smiley:
+***NB:*** _"Backend"/"System" means we have written various functions to enable the system to work automatically given specific input_. :smiley:
 
 Step | Action | Actor
 ---- | ------ | :----:
@@ -69,16 +74,24 @@ All the changes, after initialisation, should be handled on the Google sheets th
 
 Section | Notes 
 ----- | -----------  
+General Note 1 | As stated in section 1, Vue can combine HTML and CSS. It does so in something called `scss`. The `&__` is a way to group things together. Thus, inside `pages` > `about` > index.vue, line 76-126, `&__header` etc applies to the `.About` class.
+General Note 2 | Generally speaking, each page on the webpage makes use of a `template`, with a `script` to activate it. The `mounted` function (EG: `pages` > `apply` > index.vue, line 103) loads the page.
+General Note 3 |  In `pages` > `upload` > index.vue, there are a few `$refs`. This refers over to the respective functions which may be found in the file.
+General Note 4 | In line 78 of the same file, the following line of code may be seen: ```import axios from "~/plugins/axios";``` this is the means by which we are connecting the frontend with the backend server; using this, data keyed into the front end ends up on the Google Sheets. Consequently, the `.post` method is use because we are posting these to the Google Sheets.
+General Note 5 | The application has validation on both frontend and backend to check for lengths of input in, say, telephone number and email address. These follow the if/else checkers.
+General Note 6 | For the file extension/mime types, the backend validation is done using a multer package.
+General Note 7 | To store endpoints, we used multer s3: see `api` > `src` > app.js, lines 6 and 23. Here, we defined s3 and left the access key/secret access key as is as this would be provided by the admin.
+General Note 8 | The mail encrypting/decrypting function is found in line 29-48 of `api` > `src` > app.js.
+General Note 9 | We have also created the endpoints for the teach form.
 2.D | The scripts running this query live in `package.json`, entry "scripts". This generates a file called `google-sheet-config.json` in the `src` folder which is blank.
 2.H-K | This populates the `google-sheet-config.json` file. The functions generating this are in `api` > `bin` > `create-dev-config`.This works via a resolve/reject function.
-
 
 ### Structure:
 
 ```
                         HOME ------ DONATE
                          |
-        --------------------------------------------------------------
+        -------------------------------------------------------------
         |         |         |         |         |         |         |
       APPLY     TEACH    SUPPORT   CHAPTERS   ABOUT    CONTACT  WOMEN CODING TEASER
                                       |
@@ -96,26 +109,33 @@ Section | Notes
 
 This README was written by Jason Tan and is correct as of 2 September 2018.
 
-This website was created by [Maartje/Mauro] on [] and was last worked on 2 September 2018 by Class 14:
+This website was created by Maartje Kruijt and Mauro Mandracchia and was last worked on 2 September 2018 by Class 14:
 
 * **A Team** (Fadi, Emad, Wael & Hadeel)
 * **Big Voice Big Team** (Sarbast, Sobhi, Rashad & Murat)
 * **Return 0** (Aya, Isaac & Jason)
 
-## 5. Construction process
+## 5. Project History
 
 ### Event storm
 
-In week 1 of the project we had something called an event storm, which is to be found [here]().
+In week 1 of the project we had something called an event storm, an example of which may be found [here](https://www.youtube.com/watch?v=1i6QYvYhlYQ).
 
-The general idea is that the task giver provides 
+The general idea is that the task giver ("TG") talks to a group of developers/engineers ("devs"), telling them what his/her issues are. TG says what the existing processes are, what the pain points are, and what TG wants devs to do.
+
+Each individual dev writes out, on sticky notes, what he/she thinks are:-
+1. Every step of the process as it is at the present;
+2. Every step of what the process should also be;
+3. What the potential issues are.
+
+These go onto a wall, or board, and everyone groups the sticky notes together, re-ordering them as is necessary. Notes bearing the same concepts can thus be dropped, simplifying the wall.
+
+Through this process (called "aggregation"), eventually a common thread is found, and that becomes the workflow which the devs will work on.
 
 ### Admin stories
-In week 2 of the project we finalised the user story, which can be found [here](https://github.com/Aya-Alabrash/Class14-Project/tree/master/Presentation).
+In week 2 of the project we finalised the user story, a summary of which is as follows.
 
-Essentially it comes down to the following:-
-
-As an Admin, I would expect to:-
+_As an Admin, I would expect to:-_
 
 1. Create new Google sheet as a template.
 2. Set a deadline for the registration process.
@@ -148,12 +168,8 @@ As an Admin, I would expect to:-
 25. Send an email to all the successful candidates, providing information about the next class. 
 26. Create a new class.
 
---vue JS can write html tag.
-script activates components etc.
+## 6. Future Development
 
-mounthed fuctions - loads the page.
-methods activated using .this method.
-html/css can be combined using vue. scss used in styling, using classes and name. &__ denotes, eg, belonging to .Apply.
-$refs refers over to the function.
-validations of input.
-axios - way of connecting to server. [.post because posting to google sheets.]
+As at 2 September 2018, these are possible future ideas to work on:-
+- 
+Have more fun whilst working on this!
